@@ -1,5 +1,5 @@
 # Abito -сайт обновлений
-lesson-project
+lesson-project for Glo-Academy
 
 ##Выполнил проект Воронцов Александр
 
