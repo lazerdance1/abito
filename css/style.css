@@ -4,10 +4,13 @@ body {
 	color: #0a143a;
 	border: none;
 }
-.header {
-	padding: 30px 0 0 0;
+.container {
 	max-width: 1146px;
 	margin: auto;
+}
+.header {
+	padding: 30px 0;
+	margin-bottom: 12px;
 }
 .navbar {
 	display: flex;
@@ -87,4 +90,129 @@ body {
 }
 .search-icon {
 	margin: 0px 5px 0px 0px;
+}
+/* главная страница задаём  grid-контейнер с отношением 9 на 3 */
+.page-content {
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	grid-column-gap: 30px;
+}
+/* блок из 9 фракций задаю отрицательный маржин для того чтоб флекс-контейнеры не вылазили, после в cards(карточке товара) задаю padding чтоб выровнять отступы в flexbox */
+.main {
+	margin: 0px -15px;
+}
+.page-title {
+	font-weight: bold;
+}
+.main-title {
+	font-size: 24px;
+	line-height: 28px;
+	padding: 0 15;
+}
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+}
+.card {
+	max-width: 264px;
+	flex: 0 1 33.333%;
+	padding: 0 12px;
+	margin: 0px 0px 20px 0px;
+}
+.card-image {
+	border-radius: 10px;
+	width: 264px;
+	height: 178px;
+	object-fit: cover;
+}
+.card-header {
+	/* блок состоит из двух состовляющих - название товара и сердечко(like) */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card-title {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	color: #256eeb;
+	margin: 12px 0px 5px 0px;
+}
+.like {
+	/* задаю цвет по умолчанию для сердечка возле названия товара */
+	background: #ffffff;
+	border: none;
+	cursor: pointer;
+	margin-left: 15px;
+}
+.card-price {
+	display: block;
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 10px;
+}
+.card-text {
+	/* задаю размеры и цвет текста для описания товара и врямени добавления товара на витрину магазина */
+	font-size: 14px;
+	line-height: 16px;
+	color: #c4c4c4;
+	margin: 0px 0px 4px 0px;
+}
+.card-link {
+	/* убираю подчёркивания в техническом блоке-ссылке, применённом к картинке и названию */
+	text-decoration: none;
+}
+/* конец блока с товарами */
+/* начало блока sidebar - управляющего блока навигации */
+.sidebar {
+}
+.sidebar-title {
+	font-size: 18px;
+	line-height: 21px;
+}
+.service-title {
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0;
+}
+.service {
+	margin: 0px 0px 25px 0px;
+}
+.service-text {
+	margin: 5px 0 0 0;
+	font-size: 14px;
+	max-width: 217px;
+}
+
+.sidebar-crossline:before {
+	content: "";
+	position: absolute;
+	width: 261px;
+	height: 0px;
+	border: 1px solid #e5e5e5;
+}
+.footer {
+	padding: 18px 0px 0px 0px;
+}
+.footer-text {
+	margin: 0;
+	color: #c4c4c4;
+	font-size: 14px;
+	line-height: 16px;
+}
+.footer-menu {
+	margin: 0 0 15px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.footer-link {
+	color: #0a143a;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 14px;
+	display: inline-block;
+	margin-bottom: 5px;
 }
